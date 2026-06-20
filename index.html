@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordly - Interactive Dictionary</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Wordly</h1>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">
+          🌙 Toggle Theme
+        </button>
+      </header>
+
+      <main>
+        <form id="search-form">
+          <input
+            type="text"
+            id="word-input"
+            placeholder="Search for a word..."
+            aria-label="Search word input"
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <section id="results-container" class="hidden">
+          <div class="word-header">
+            <h2 id="word-title"></h2>
+            <button
+              id="play-audio"
+              class="hidden"
+              aria-label="Play pronunciation"
+            >
+              🔊 Play
+            </button>
+          </div>
+          <p id="phonetic"></p>
+          <div id="meanings-container"></div>
+        </section>
+
+        <section id="error-container" class="hidden">
+          <h3 id="error-title"></h3>
+          <p id="error-message"></p>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
